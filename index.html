@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <h1>Welkome to Todo list</h1>
+        </div>
+    </nav>
+<!--LEFT MENU-->
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-6 text-left leftMenu">
+        <h1 class="word">Create user</h1>
+        <div class="wrap">
+            <div class="col-xs-8">
+                <select class="form-control" id="sel" >
+                    <option value="">Select type of user</option>
+                    <option value="user">User</option>
+                    <option value="student">Student</option>
+                    <option value="developer">Developer</option>
+                </select>
+            </div>
+            <div class="col-xs-6"><input class="form-control" id="name" type="text" placeholder="Name"> </div>
+            <div class="col-xs-6"><input class="form-control" id="surname" type="text" placeholder="Surname "></div>
+            <div class="col-xs-6"> <input class="form-control" id="spec" type="text" placeholder="Specialization"></div>
+            <div class="col-xs-6"><input class="form-control" id="jobt" type="text" placeholder="Job title"> </div>
+            <div class="col-xs-8">
+                <button type="button" id ="createUser" class="btn btn-info">Create</button>
+            </div>
+
+        </div>
+        </div>
+
+ <!--RIGHT MRNU-->
+<div class="col-sm-6 text-left  rightMenu">
+    <h1 class="word">Create task</h1>
+    <div class="wrap2">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Simple task</a></li>
+            <li><a class="homeTask" data-toggle="tab" href="#menu1">Home task</a></li>
+            <li><a class="projTask" data-toggle="tab" href="#menu2">Project task</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+            <div class="col-xs-6"><input class="form-control title"  type="text" placeholder="Title"> </div>
+             <div class="col-xs-6"><input class="form-control status"  type="text"placeholder="Status"></div>
+                <div class="col-xs-6">
+                    <button type="button" class="btn btn-info SimpleComplete" onclick="addSimpleTask()">Complete </button>
+                </div>
+            </div>
+
+            <div id="menu1" class="tab-pane fade">
+                <div class="col-xs-6"><input class="form-control title1" type="text" placeholder="Title"> </div>
+                <div class="col-xs-6"><input class="form-control status1"  type="text"placeholder="Stutus"></div>
+                <div class="col-xs-10">
+                <textarea class="form-control comment1" rows="5" placeholder="Description"></textarea>
+                </div>
+                <div class="col-xs-6">
+                    <button type="button" class="btn btn-info HomeComplete" onclick="addHomeTask()">Complete </button>
+                </div>
+            </div>
+
+            <div id="menu2" class="tab-pane fade">
+                <div class="col-xs-6"><input class="form-control title2"  type="text" placeholder="Title"> </div>
+                <div class="col-xs-6"><input class="form-control status2" type="text" placeholder="Stutus"></div>
+                <div
+                        class="col-xs-6"><input class="form-control deadline2" type="date" placeholder="Deadline"></div>
+                <div class="col-xs-10">
+                    <textarea class="form-control comment2" rows="5" placeholder="Discription"></textarea>
+                </div>
+                <div class="col-xs-6">
+                    <button type="button"  class="btn btn-info ProjectComplete" onclick="addProjectTask()">Complete </button>
+                </div>
+
+            </div>
+        </div>
+     </div>
+   </div>
+
+ </div>
+</div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Show Tasks
+    </button>
+<footer class="container-fluid text-center">
+    <p>© 2017 Zakrevsky A.  All rights reserved <a href="https://www.intita.com">www.intita.com</a></p>
+</footer>
+
+<!--MODULE WINDOW-->
+
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal-title">
+                        <!--ToDo-->
+                    </h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body ">
+                    <h2>Information About</h2>
+                    <p class="pushUserData"></p>
+
+                    <p class="pushTaskData"></p>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="main.js" defer></script>
+</body>
+</html>

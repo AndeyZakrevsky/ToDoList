@@ -1,0 +1,48 @@
+body{
+    color:#7F5BF0;
+    background: #D3D3D3;
+}
+
+.rightMenu,.leftMenu{
+    background: #F2F2F2;
+    height: 550px;
+}
+.word{
+    float: left;
+    margin-right: 400px;
+}
+
+.wrap2{
+    visibility: hidden;
+}
+
+footer{
+    background: #222222;
+    height: 40px;
+}
+
+.col-xs-6,.col-xs-8{
+    margin-top: 30px;
+}
+
+.col-xs-10{
+    margin-top: 30px;
+}
+
+.wrap2{
+    margin-top: 25px;
+}
+
+#spec{
+    display: none;
+}
+
+#jobt{
+    display: none;
+}
+
+
+
+
+
+
