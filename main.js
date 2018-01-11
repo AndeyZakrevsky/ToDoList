@@ -1,5 +1,6 @@
 var toDoTasks = [];
 var i;
+var count = false;
 var userType;
 var person;
 var createUser=document.querySelector('#createUser');
@@ -66,7 +67,7 @@ createUser.addEventListener('click', function () {
     var surname = document.querySelector('#surname').value;
     var spec = document.querySelector('#spec').value;
     var jobTitle = document.querySelector('#jobt').value;
-
+    if(count) stylesForTascks();
         switch (userType){
         case 'user':
             person = new MakeUser(name,surname,userType);
@@ -92,7 +93,6 @@ createUser.addEventListener('click', function () {
         var status = document.querySelector('.status').value;
         person.task = new SimpleTask(title,status);
         pushData();
-        stylesForTascks();
     }
         function addHomeTask(){
             var title = document.querySelector('.title1').value;
@@ -100,7 +100,6 @@ createUser.addEventListener('click', function () {
             var description= document.querySelector('.comment1').value;
             person.task= new HomeTask(title,status,description);
             pushData();
-            stylesForTascks();
         }
             function addProjectTask() {
                 var title = document.querySelector('.title2').value;
@@ -109,7 +108,6 @@ createUser.addEventListener('click', function () {
                 var deadline = document.querySelector('.deadline2').value;
                 person.task= new ProjectTask(title,status,description,deadline);
                 pushData();
-                stylesForTascks();
             }
 
 //we paste the data into HTML
@@ -127,6 +125,7 @@ function pushData() {
     i = toDoTasks.length;
     toDoTasks[i]= person;
     person = false;
+    count =true;
 }
 console.log(toDoTasks);
 
