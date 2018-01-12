@@ -29,6 +29,7 @@
                     <option value="developer">Developer</option>
                 </select>
             </div>
+        <form id="myForm">
             <div class="col-xs-6"><input class="form-control" id="name" type="text" placeholder="Name"> </div>
             <div class="col-xs-6"><input class="form-control" id="surname" type="text" placeholder="Surname "></div>
             <div class="col-xs-6"> <input class="form-control" id="spec" type="text" placeholder="Specialization"></div>
@@ -36,7 +37,7 @@
             <div class="col-xs-8">
                 <button type="button" id ="createUser" class="btn btn-info">Create</button>
             </div>
-
+         </form>
         </div>
         </div>
 
@@ -52,14 +53,17 @@
 
         <div class="tab-content">
             <div id="home" class="tab-pane fade in active">
+                <form id="myForm2">
             <div class="col-xs-6"><input class="form-control title"  type="text" placeholder="Title"> </div>
              <div class="col-xs-6"><input class="form-control status"  type="text"placeholder="Status"></div>
                 <div class="col-xs-6">
                     <button type="button" class="btn btn-info SimpleComplete" onclick="addSimpleTask()">Complete </button>
                 </div>
+                </form>
             </div>
 
             <div id="menu1" class="tab-pane fade">
+                <form  id="myForm3">
                 <div class="col-xs-6"><input class="form-control title1" type="text" placeholder="Title"> </div>
                 <div class="col-xs-6"><input class="form-control status1"  type="text"placeholder="Stutus"></div>
                 <div class="col-xs-10">
@@ -68,9 +72,11 @@
                 <div class="col-xs-6">
                     <button type="button" class="btn btn-info HomeComplete" onclick="addHomeTask()">Complete </button>
                 </div>
+                </form>
             </div>
 
             <div id="menu2" class="tab-pane fade">
+                <form  id="myForm3">
                 <div class="col-xs-6"><input class="form-control title2"  type="text" placeholder="Title"> </div>
                 <div class="col-xs-6"><input class="form-control status2" type="text" placeholder="Stutus"></div>
                 <div
@@ -81,7 +87,7 @@
                 <div class="col-xs-6">
                     <button type="button"  class="btn btn-info ProjectComplete" onclick="addProjectTask()">Complete </button>
                 </div>
-
+                </form>
             </div>
         </div>
      </div>
